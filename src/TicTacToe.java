@@ -164,21 +164,23 @@ public class TicTacToe{
 	/*
 	 * Returns true if there are no places left to move
 	 */
-	public boolean stalemate() {
-	    /*
-		 * Step 4: Fill in the code for the stalemate method. It
-         * should return true if there are no more places to move 
-		 * on the board. Otherwise, return false return false; 
-		 */
-		
-		
-		 return false;   // replace with your own return 
+	public boolean stalemate() {	
+		if (board[0][0] != ' ' && board[0][1] != ' ' && board [0][2] != ' ' &&
+			board[1][0] != ' ' && board[1][1] != ' ' && board [1][2] != ' ' &&
+			board[2][0] != ' ' && board[2][1] != ' ' && board [2][2] != ' ')
+			{
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
+	
 	public char getPlayer() {
 		return player;
 	}
+	
 	public void print() {
-
 		System.out.println();
 		System.out.println("\t  1 2 3");
 		System.out.println();
@@ -189,13 +191,6 @@ public class TicTacToe{
 		System.out.println("\tC "+board[2][0]+"|"+board[2][1]+"|"+board[2][2]);
 		System.out.println();
 	}
-	
-	/* 
-	 * Step 6: Main Method for Final Step - Delete your main method 
-	 * and uncomment this one. 
-	 * Runs the game by getting input from the user, making the 
-	 * appropriate moves, and prints who won or if it was a stalemate. 
-	*/ 
 	
 	public static void main(String[] args) {
 
